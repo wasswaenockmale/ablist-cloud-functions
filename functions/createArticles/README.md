@@ -2,21 +2,10 @@
 
 ## 🧰 Usage
 
-### GET /
+### POST /
 
-- Returns a "Hello, World!" message.
+- Saves articles from techinafrica.com to Ablist database.
 
-**Response**
-
-Sample `200` Response:
-
-```text
-Hello, World!
-```
-
-### POST, PUT, PATCH, DELETE /
-
-- Returns a "Learn More" JSON response.
 
 **Response**
 
@@ -24,10 +13,7 @@ Sample `200` Response:
 
 ```json
 {
-  "motto": "Build like a team of hundreds_",
-  "learn": "https://appwrite.io/docs",
-  "connect": "https://appwrite.io/discord",
-  "getInspired": "https://builtwith.appwrite.io"
+  "success": "ok"
 }
 ```
 
@@ -43,4 +29,17 @@ Sample `200` Response:
 
 ## 🔒 Environment Variables
 
-No environment variables required.
+##### Appwrite variables 
+APPWRITE_PROJECT_ENDPOINT
+APPWRITE_PROJECT_ID
+APPWRITE_DATABASE_ID
+APPWRITE_ARTICLES_COLLECTION_ID
+APPWRITE_API_KEY
+
+##### Articles endpoint 
+TECH_IN_AFRICA
+TECH_JAJA
+
+##### WORDPRESS API ENDPOINTS 
+AUTHOR_ENDPOINT
+MEDIA_API_URL
