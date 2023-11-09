@@ -37,6 +37,24 @@
                 ".npm"
             ],
             "path": "functions/storeCodeTips"
+        },
+        {
+            "$id": "654c9135959db6b2a1e2",
+            "name": "deleteOldArticles",
+            "runtime": "node-18.0",
+            "execute": [],
+            "events": [],
+            "schedule": "0 0 * * *",
+            "timeout": 15,
+            "enabled": true,
+            "logging": true,
+            "entrypoint": "src/main.js",
+            "commands": "npm install",
+            "ignore": [
+                "node_modules",
+                ".npm"
+            ],
+            "path": "functions/deleteOldArticles"
         }
     ]
 }
