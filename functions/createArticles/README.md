@@ -26,6 +26,7 @@ Sample `200` Response:
 | Build Commands    | `npm install` |
 | Permissions       | `any`         |
 | Timeout (Seconds) | 15            |
+| Schedule (hour)   | 1             |
 
 ## 🔒 Environment Variables
 
