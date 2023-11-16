@@ -1,5 +1,5 @@
 import { Client } from 'node-appwrite';
-import deleteArticles from './utils/deleteArticles';
+import deleteArticles from './utils/deleteArticles.js';
 
 // This is your Appwrite function
 // It's executed each time we get a request
