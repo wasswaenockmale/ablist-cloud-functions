@@ -18,7 +18,7 @@ export default async function saveArticles(client) {
     articles.map(async (article) => {
       if (!currentData.includes(article.id)) {
         const articleData = {
-          articleID: article.id.toString(),
+          articleID: article.id,
           title: article.title.rendered,
           excerpt: getText(article.excerpt.rendered),
           articleContent: getText(article.content.rendered),
@@ -47,6 +47,4 @@ export default async function saveArticles(client) {
       }
     })
   );
-
-  // return arr_articles;
 }
