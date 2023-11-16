@@ -1,21 +1,18 @@
-import { Databases } from "node-appwrite";
+import { Databases, Query } from "node-appwrite";
 
 export default async function deleteArticles(client) {
-  try {
-    // Initialize database
-    const database = new Databases(client);
+  
+  // Initialize database 
+  const database = new Databases(client);
 
+  try {
     // calculate the date 
     const oneWeekAgo = new Date();
     oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
 
-    // Query to find articles older than one week.
+    // Query to find articles older than one week. 
     const query = [
-      {
-        field: 'publishedAt',
-        operator: '<',
-        value: oneWeekAgo.toISOString()
-      }
+      Query.lessThanEqual("publishedAt", oneWeekAgo.toISOString())
     ];
 
     // find the old articles 
@@ -23,10 +20,9 @@ export default async function deleteArticles(client) {
       process.env.APPWRITE_DATABASE_ID,
       process.env.APPWRITE_ARTICLES_COLLECTION_ID,
       query
-    ).then(response => response.documents)
-
+    ).then(response => response.documents);
+    
     oldArticles.forEach(oldArticle => {
-
       // delete the oldArticle.
       database.deleteDocument(
         process.env.APPWRITE_DATABASE_ID,
