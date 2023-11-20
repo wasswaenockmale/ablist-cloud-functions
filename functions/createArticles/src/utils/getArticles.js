@@ -4,7 +4,7 @@ import axios from "axios";
 export default async function getArticles() {
   try {
     return await axios
-      .get(`${process.env.TECH_IN_AFRICA}?page=1&per_page=20`)
+      .get(`${process.env.TECH_IN_AFRICA}?category=technology`)
       .then(response => {
         return response.data;
       })
