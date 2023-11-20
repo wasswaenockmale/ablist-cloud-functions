@@ -13,7 +13,6 @@ export default async function saveArticles(client) {
   const articles = await getArticles();
   const currentData = await getCurrentDataFromDatabase(client);
 
-  // console.log("Current Data",currentData[0]);
   await Promise.all(
     articles.map(async (article) => {
       if (!currentData.includes(article.id)) {
