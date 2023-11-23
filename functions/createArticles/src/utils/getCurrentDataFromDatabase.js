@@ -8,7 +8,7 @@ export default async function getCurrentDataFromDatabase(client) {
       process.env.APPWRITE_ARTICLES_COLLECTION_ID,
       [
         Query.limit(50),
-        Query.offset(50)
+        Query.offset(0)
       ]
     )
     const articleIDs = res.documents.map(rowData => rowData.articleID);
