@@ -55,6 +55,24 @@
                 ".npm"
             ],
             "path": "functions/deleteOldArticles"
+        },
+        {
+            "$id": "6576f434a8c512b30629",
+            "name": "notifications",
+            "runtime": "node-18.0",
+            "execute": [],
+            "events": ["databases.654357920af39a174123.collections.opportunities.create"],
+            "schedule": "",
+            "timeout": 15,
+            "enabled": true,
+            "logging": true,
+            "entrypoint": "src/main.js",
+            "commands": "npm install",
+            "ignore": [
+                "node_modules",
+                ".npm"
+            ],
+            "path": "functions/notifications"
         }
     ]
 }
